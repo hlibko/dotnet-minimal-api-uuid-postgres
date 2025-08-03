@@ -1,0 +1,20 @@
+﻿@hostname = http://localhost:5133
+@id = a43ad490-5df7-4d5c-bc91-7dc089df987c
+
+### Create a new user
+POST {{hostname}}/users
+Content-Type: application/json
+{
+  "username": "alice"
+}
+
+###
+
+### Get all users
+GET {{hostname}}/users
+
+###
+
+### Get user by ID
+# Replace {{id}} with an existing GUID after creating the user
+GET {{hostname}}/users/{{id}}
